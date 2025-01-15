@@ -16,7 +16,7 @@ body {
 
 /* Header Styling */
 header {
-    background-color: #4b0082; /* Indigo */
+    background-color: #02571a; /* Indigo */
     color: #e6e6fa; /* Lavender */
     padding: 1rem 0;
     text-align: center;
@@ -61,7 +61,7 @@ main h2 {
 
 main p {
     margin-bottom: 1.5rem;
-    text-align: left;
+    text-align:justify;
 }
 
 main ul, main ol {
@@ -77,7 +77,7 @@ main li, main ol li {
 footer {
     text-align: center;
     padding: 1rem 0;
-    background-color: #4b0082; /* Indigo */
+    background-color: #02571a; /* Indigo */
     color: #e6e6fa;
     bottom: 0;
     width: 100%;
@@ -104,7 +104,7 @@ body {
 /* Ensure footer stays at the bottom */
 footer {
     margin-top: auto;
-    background-color: #4b0082; /* Indigo */
+    background-color: #02571a; /* Indigo */
     color: #e6e6fa; /* Lavender */
     text-align: center;
     padding: 1rem 0;
