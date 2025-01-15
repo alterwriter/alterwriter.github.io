@@ -18,3 +18,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Smooth hover effect for gallery items
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+        item.style.transition = "transform 0.3s, box-shadow 0.3s";
+    });
+
+    item.addEventListener('mouseleave', () => {
+        item.style.transition = "transform 0.3s, box-shadow 0.3s";
+    });
+});
