@@ -1,37 +1,20 @@
-// Script for smooth scrolling navigation
-document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('nav ul li a');
+// Simple script to add interactivity to the portfolio
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', event => {
-            event.preventDefault();
+// Ensure all external links open in a new tab
+document.querySelectorAll('a[target="_blank"]').forEach(link => {
+    link.setAttribute('rel', 'noopener noreferrer');
+});
 
-            const targetId = link.getAttribute('href').replace('/', '');
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop,
-                    behavior: 'smooth',
-                });
-            }
-        });
+// Smooth scroll effect (optional if using anchor links)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
     });
 });
-
-// Dynamic footer year update
-const footer = document.querySelector('footer p');
-const currentYear = new Date().getFullYear();
-footer.innerHTML = `&copy; ${currentYear} Ananda (alterwriter / leafforwriting)`;
-
-// Placeholder functionality for business contact
-const businessSection = document.querySelector('#business');
-const contactButton = document.createElement('button');
-contactButton.textContent = 'Contact Us';
-contactButton.style.marginTop = '1rem';
-
-contactButton.addEventListener('click', () => {
-    alert('Thank you for reaching out! Please email us at boxsploit@example.com.');
-});
-
-businessSection.appendChild(contactButton);
